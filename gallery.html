@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery - Shihab Ibrahim</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: Georgia, serif; line-height: 1.8; margin: 0; padding: 0; background: #fff; color: #2c3e50; }
+        .container { max-width: 900px; margin: auto; padding: 20px; text-align: center; }
+        
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="projects.html">Projects</a>
+        <a href="certificates.html">Certificates</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+        img { width: 100%; max-height: 600px; border-radius: 10px; display: none; }
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="projects.html">Projects</a>
+        <a href="certificates.html">Certificates</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h1>Photo Gallery</h1>
+        <p>Photos from teaching, labs, conferences, competitions, and exhibitions.</p>
+        <img src="gallery1.jpg" class="slide" style="display:block;">
+        <img src="gallery2.jpg" class="slide">
+        <img src="gallery3.jpg" class="slide">
+        <img src="gallery4.jpg" class="slide">
+    </div>
+    <script>
+        let index = 0;
+        const slides = document.querySelectorAll('.slide');
+        setInterval(() => {
+            slides[index].style.display = 'none';
+            index = (index + 1) % slides.length;
+            slides[index].style.display = 'block';
+        }, 3000);
+    </script>
+</body>
+</html>
