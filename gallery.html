@@ -3,53 +3,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Gallery - Shihab Ibrahim</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gallery</title>
     <style>
-        body { font-family: Georgia, serif; line-height: 1.8; margin: 0; padding: 0; background: #fff; color: #2c3e50; }
-        .container { max-width: 900px; margin: auto; padding: 20px; text-align: center; }
-        
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="research.html">Research</a>
-        <a href="teaching.html">Teaching</a>
-        <a href="projects.html">Projects</a>
-        <a href="certificates.html">Certificates</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-
-        img { width: 100%; max-height: 600px; border-radius: 10px; display: none; }
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 20px; }
+        .gallery-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+        .gallery-container img {
+            max-width: 800px;
+            max-height: 600px;
+            border: 5px solid #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .gallery-container img:hover { transform: scale(1.03); }
     </style>
 </head>
 <body>
-    
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="research.html">Research</a>
-        <a href="teaching.html">Teaching</a>
-        <a href="projects.html">Projects</a>
-        <a href="certificates.html">Certificates</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+    <h1 style="text-align: center;">Gallery</h1>
+    <div class="gallery-container">
+        <img src="gallery/gallery1.jpg" alt="gallery1.jpg">
+        <img src="gallery/gallery2.jpg" alt="gallery2.jpg">
+        <img src="gallery/gallery3.jpg" alt="gallery3.jpg">
+        <img src="gallery/gallery4.jpg" alt="gallery4.jpg">
+        <img src="gallery/gallery5.jpg" alt="gallery5.jpg">
+        <img src="gallery/gallery6.jpg" alt="gallery6.jpg">
+        <img src="gallery/gallery7.jpg" alt="gallery7.jpg">
+        <img src="gallery/gallery8.jpg" alt="gallery8.jpg">
+        <img src="gallery/gallery9.jpg" alt="gallery9.jpg">
+        <img src="gallery/gallery10.jpg" alt="gallery10.jpg">
+        <img src="gallery/gallery11.jpg" alt="gallery11.jpg">
+        <img src="gallery/gallery12.jpg" alt="gallery12.jpg">
+        <img src="gallery/gallery13.jpg" alt="gallery13.jpg">
+        <img src="gallery/gallery14.jpg" alt="gallery14.jpg">
+        <img src="gallery/gallery15.jpg" alt="gallery15.jpg">
+        <img src="gallery/gallery16.jpg" alt="gallery16.jpg">
+        <img src="gallery/gallery17.jpg" alt="gallery17.jpg">
+        <img src="gallery/gallery18.jpg" alt="gallery18.jpg">
+        <img src="gallery/gallery19.jpg" alt="gallery19.jpg">
+        <img src="gallery/gallery20.jpg" alt="gallery20.jpg">
+        <img src="gallery/gallery21.jpg" alt="gallery21.jpg">
+        <img src="gallery/gallery22.jpg" alt="gallery22.jpg">
+        <img src="gallery/gallery23.jpg" alt="gallery23.jpg">
+        <img src="gallery/gallery24.jpg" alt="gallery24.jpg">
+        <img src="gallery/gallery25.jpg" alt="gallery25.jpg">
+        <img src="gallery/gallery26.jpg" alt="gallery26.jpg">
+        <img src="gallery/gallery27.jpg" alt="gallery27.jpg">
+        <img src="gallery/gallery28.jpg" alt="gallery28.jpg">
+        <img src="gallery/gallery29.jpg" alt="gallery29.jpg">
+        <img src="gallery/gallery30.jpg" alt="gallery30.jpg">
 
-    <div class="container">
-        <h1>Photo Gallery</h1>
-        <p>Photos from teaching, labs, conferences, competitions, and exhibitions.</p>
-        <img src="gallery1.jpg" class="slide" style="display:block;">
-        <img src="gallery2.jpg" class="slide">
-        <img src="gallery3.jpg" class="slide">
-        <img src="gallery4.jpg" class="slide">
     </div>
-    <script>
-        let index = 0;
-        const slides = document.querySelectorAll('.slide');
-        setInterval(() => {
-            slides[index].style.display = 'none';
-            index = (index + 1) % slides.length;
-            slides[index].style.display = 'block';
-        }, 3000);
-    </script>
 </body>
 </html>
