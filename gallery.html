@@ -6,28 +6,43 @@
    Gallery
   </title>
   <style>
-   body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f8f8f8;
-  }
-  nav {
-    background-color: #1E2A38;
-    padding: 15px 0;
-    text-align: center;
-  }
-  nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 20px;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  nav a:hover {
-    text-decoration: underline;
-  }
+   body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #fff; color: #2c3e50; }
+    .container { max-width: 900px; margin: auto; padding: 20px; text-align: center; }
+    nav {
+        background-color: #2c3e50;
+        padding: 10px 0;
+        text-align: center;
+    }
+    nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    nav a:hover {
+        text-decoration: underline;
+    }
+    img {
+        max-height: 600px;
+        width: auto;
+        border-radius: 10px;
+        display: none;
+    }
   </style>
+  <script>
+   let index = 0;
+    window.onload = function() {
+        const slides = document.querySelectorAll('.slide');
+        if (slides.length > 0) {
+            slides[0].style.display = 'block';
+            setInterval(() => {
+                slides[index].style.display = 'none';
+                index = (index + 1) % slides.length;
+                slides[index].style.display = 'block';
+            }, 4000);
+        }
+    };
+  </script>
  </head>
  <body>
   <nav>
