@@ -1,126 +1,115 @@
+
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Projects - Shihab Ibrahim
-  </title>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <style>
-   body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; }
-    .container { max-width: 900px; margin: auto; padding: 20px; }
-    nav {
-        background-color: #2c3e50;
-        padding: 10px 0;
-        text-align: center;
-    }
-    nav a {
-        color: white;
-        margin: 0 15px;
-        text-decoration: none;
-        font-weight: bold;
-    }
-    nav a:hover {
-        text-decoration: underline;
-    }
-    img { max-width: 100%; height: auto; border-radius: 10px; margin-top: 20px; }
-    h1 { color: #2c3e50; }
-    h2 { color: #34495e; margin-top: 30px; }
-  </style>
- </head>
- <body>
-  <nav>
-   <a href="index.html">
-    Home
-   </a>
-   <a href="research.html">
-    Research
-   </a>
-   <a href="teaching.html">
-    Teaching
-   </a>
-   <a href="projects.html">
-    Projects
-   </a>
-   <a href="certificates.html">
-    Certificates
-   </a>
-   <a href="gallery.html">
-    Gallery
-   </a>
-   <a href="contact.html">
-    Contact
-   </a>
-  </nav>
-  <div class="container">
-   <h1>
-    Selected Projects
-   </h1>
-   <div class="project-section">
-    <h2>
-     Engineering Software Tools
-    </h2>
-    <p>
-     <strong>
-      Mini Proctor Hammer:
-     </strong>
-     [Add short description later]
-    </p>
-    <img alt="Mini Proctor Hammer" src="pic1.jpg"/>
-    <img alt="Mini Proctor Hammer Detail" src="pic2.jpg"/>
-   </div>
-   <div class="project-section">
-    <h2>
-     Structural Design Projects
-    </h2>
-    <p>
-     <strong>
-      School Building:
-     </strong>
-     [Description here]
-    </p>
-    <img alt="School Design" src="pic3.jpg"/>
-    <p>
-     <strong>
-      Villa Project:
-     </strong>
-     [Description here]
-    </p>
-    <img alt="Villa Design" src="pic4.jpg"/>
-    <p>
-     <strong>
-      15-Story Structure:
-     </strong>
-     [Description here]
-    </p>
-    <img alt="High-Rise Design" src="pic5.jpg"/>
-   </div>
-   <div class="project-section">
-    <h2>
-     Research Prototypes
-    </h2>
-    <p>
-     <strong>
-      Synthetic Sandstone:
-     </strong>
-     [Description here]
-    </p>
-    <img alt="Synthetic Sandstone" src="pic6.jpg"/>
-    <p>
-     <strong>
-      Geopolymer Soil Stabilization:
-     </strong>
-     [Description here]
-    </p>
-    <img alt="Soil Stabilization Sample" src="pic7.jpg"/>
-    <p>
-     <strong>
-      Stonite Cement Replacement:
-     </strong>
-     [Description here]
-    </p>
-    <img alt="Cement Replacement Test" src="pic8.jpg"/>
-   </div>
-  </div>
- </body>
+<head>
+    <meta charset="utf-8"/>
+    <title>Projects - Shihab Ibrahim</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #fff; color: #2c3e50; }
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        nav {
+            background-color: #2c3e50;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        h1, h2 { text-align: center; color: #2c3e50; }
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            text-align: center;
+        }
+        .slide {
+            display: none;
+            max-height: 600px;
+            width: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function startSlideshow(containerClass, delay) {
+            let slideIndex = 0;
+            const containers = document.getElementsByClassName(containerClass);
+            for (let c = 0; c < containers.length; c++) {
+                const slides = containers[c].getElementsByClassName('slide');
+                if (slides.length > 0) {
+                    slides[0].style.display = "block";
+                    setInterval(() => {
+                        slides[slideIndex].style.display = "none";
+                        slideIndex = (slideIndex + 1) % slides.length;
+                        slides[slideIndex].style.display = "block";
+                    }, delay);
+                }
+            }
+        }
+
+        window.onload = function() {
+            startSlideshow('slideshow1', 3000);
+            startSlideshow('slideshow2', 3000);
+            startSlideshow('slideshow3', 3000);
+        };
+    </script>
+</head>
+<body>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="teaching.html">Teaching</a>
+    <a href="projects.html">Projects</a>
+    <a href="certificates.html">Certificates</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+</nav>
+<div class="container">
+    <h1>Selected Projects</h1>
+
+    <h2>Engineering Software Tools</h2>
+    <div class="slideshow-container slideshow1">
+        <img class="slide" src="rc1.jpg" alt="RC Beam 1"/>
+        <img class="slide" src="rc2.jpg" alt="RC Beam 2"/>
+        <img class="slide" src="rc3.jpg" alt="RC Beam 3"/>
+        <img class="slide" src="rc4.jpg" alt="RC Beam 4"/>
+        <img class="slide" src="rc5.jpg" alt="RC Beam 5"/>
+        <img class="slide" src="rc6.jpg" alt="RC Beam 6"/>
+    </div>
+    <div class="slideshow-container slideshow2">
+        <img class="slide" src="mix1.jpg" alt="Mix Design 1"/>
+        <img class="slide" src="mix2.jpg" alt="Mix Design 2"/>
+        <img class="slide" src="mix3.jpg" alt="Mix Design 3"/>
+        <img class="slide" src="mix4.jpg" alt="Mix Design 4"/>
+        <img class="slide" src="mix5.jpg" alt="Mix Design 5"/>
+        <img class="slide" src="mix6.jpg" alt="Mix Design 6"/>
+    </div>
+
+    <h2>Structural Design Projects</h2>
+    <div class="slideshow-container slideshow3">
+        <img class="slide" src="p1.jpg" alt="Project Image 1"/>
+        <img class="slide" src="p2.jpg" alt="Project Image 2"/>
+        <img class="slide" src="p3.jpg" alt="Project Image 3"/>
+        <img class="slide" src="p4.jpg" alt="Project Image 4"/>
+        <img class="slide" src="p5.jpg" alt="Project Image 5"/>
+        <img class="slide" src="p6.jpg" alt="Project Image 6"/>
+        <img class="slide" src="p7.jpg" alt="Project Image 7"/>
+        <img class="slide" src="p8.jpg" alt="Project Image 8"/>
+        <img class="slide" src="p9.jpg" alt="Project Image 9"/>
+        <img class="slide" src="p10.jpg" alt="Project Image 10"/>
+        <img class="slide" src="p11.jpg" alt="Project Image 11"/>
+        <img class="slide" src="p12.jpg" alt="Project Image 12"/>
+        <img class="slide" src="p13.jpg" alt="Project Image 13"/>
+        <img class="slide" src="p14.jpg" alt="Project Image 14"/>
+        <img class="slide" src="p15.jpg" alt="Project Image 15"/>
+    </div>
+</div>
+</body>
 </html>
