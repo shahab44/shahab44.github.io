@@ -3,10 +3,20 @@
 <head>
     <meta charset="utf-8"/>
     <title>Projects - Shihab Ibrahim</title>
-    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #fff; color: #2c3e50; }
-        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #fff;
+            color: #2c3e50;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
         nav {
             background-color: #2c3e50;
             padding: 10px 0;
@@ -21,44 +31,23 @@
         nav a:hover {
             text-decoration: underline;
         }
-        h1, h2 { text-align: center; color: #2c3e50; }
-        .slideshow-container {
-            position: relative;
-            max-width: 100%;
-            margin: auto;
+        h1, h2 {
             text-align: center;
+            color: #2c3e50;
         }
-        .slide {
-            display: none;
-            max-height: 600px;
-            width: auto;
-            border-radius: 10px;
-            margin-top: 20px;
+        .image-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .image-grid img {
+            width: 300px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
         }
     </style>
-    <script>
-        function startSlideshow(containerClass, delay) {
-            let slideIndex = 0;
-            const containers = document.getElementsByClassName(containerClass);
-            for (let c = 0; c < containers.length; c++) {
-                const slides = containers[c].getElementsByClassName('slide');
-                if (slides.length > 0) {
-                    slides[0].style.display = "block";
-                    setInterval(() => {
-                        slides[slideIndex].style.display = "none";
-                        slideIndex = (slideIndex + 1) % slides.length;
-                        slides[slideIndex].style.display = "block";
-                    }, delay);
-                }
-            }
-        }
-
-        window.onload = function() {
-            startSlideshow('slideshow1', 3000);
-            startSlideshow('slideshow2', 3000);
-            startSlideshow('slideshow3', 3000);
-        };
-    </script>
 </head>
 <body>
 <nav>
@@ -70,58 +59,59 @@
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
 </nav>
+
 <div class="container">
     <h1>Selected Projects</h1>
 
+    <h2>Structural Design Projects</h2>
+    <div class="image-grid">
+        <img src="struct1.jpg" alt="Structural Project 1"/>
+        <img src="struct2.jpg" alt="Structural Project 2"/>
+        <img src="struct3.jpg" alt="Structural Project 3"/>
+        <img src="struct4.jpg" alt="Structural Project 4"/>
+        <img src="struct5.jpg" alt="Structural Project 5"/>
+        <img src="struct6.jpg" alt="Structural Project 6"/>
+        <img src="struct7.jpg" alt="Structural Project 7"/>
+        <img src="struct8.jpg" alt="Structural Project 8"/>
+        <img src="struct9.jpg" alt="Structural Project 9"/>
+        <img src="struct10.jpg" alt="Structural Project 10"/>
+        <img src="struct11.jpg" alt="Structural Project 11"/>
+        <img src="struct12.jpg" alt="Structural Project 12"/>
+        <img src="struct13.jpg" alt="Structural Project 13"/>
+        <img src="struct14.jpg" alt="Structural Project 14"/>
+    </div>
+
     <h2>RC Beam Analysis</h2>
-    <div class="slideshow-container slideshow1">
-        <img class="slide" src="image1.jpg" alt="RC Beam 1"/>
-        <img class="slide" src="image2.jpg" alt="RC Beam 2"/>
-        <img class="slide" src="image3.jpg" alt="RC Beam 3"/>
-        <img class="slide" src="image4.jpg" alt="RC Beam 4"/>
-        <img class="slide" src="image5.jpg" alt="RC Beam 5"/>
-        <img class="slide" src="image6.jpg" alt="RC Beam 6"/>
-        <img class="slide" src="image7.jpg" alt="RC Beam 7"/>
-        <img class="slide" src="image8.jpg" alt="RC Beam 8"/>
-        <img class="slide" src="image9.jpg" alt="RC Beam 9"/>
-        <img class="slide" src="image10.jpg" alt="RC Beam 10"/>
-        <img class="slide" src="image11.jpg" alt="RC Beam 11"/>
-        <img class="slide" src="image12.jpg" alt="RC Beam 12"/>
-        <img class="slide" src="image13.jpg" alt="RC Beam 13"/>
-        <img class="slide" src="image14.jpg" alt="RC Beam 14"/>
-        <img class="slide" src="image15.jpg" alt="RC Beam 15"/>
-        <img class="slide" src="image16.jpg" alt="RC Beam 16"/>
+    <div class="image-grid">
+        <img src="image1.jpg" alt="RC Beam 1"/>
+        <img src="image2.jpg" alt="RC Beam 2"/>
+        <img src="image3.jpg" alt="RC Beam 3"/>
+        <img src="image4.jpg" alt="RC Beam 4"/>
+        <img src="image5.jpg" alt="RC Beam 5"/>
+        <img src="image6.jpg" alt="RC Beam 6"/>
+        <img src="image7.jpg" alt="RC Beam 7"/>
+        <img src="image8.jpg" alt="RC Beam 8"/>
+        <img src="image9.jpg" alt="RC Beam 9"/>
+        <img src="image10.jpg" alt="RC Beam 10"/>
+        <img src="image11.jpg" alt="RC Beam 11"/>
+        <img src="image12.jpg" alt="RC Beam 12"/>
+        <img src="image13.jpg" alt="RC Beam 13"/>
+        <img src="image14.jpg" alt="RC Beam 14"/>
+        <img src="image15.jpg" alt="RC Beam 15"/>
+        <img src="image16.jpg" alt="RC Beam 16"/>
     </div>
 
     <h2>Concrete Mix Design</h2>
-    <div class="slideshow-container slideshow2">
-        <img class="slide" src="cmd1.jpg" alt="Mix Design 1"/>
-        <img class="slide" src="cmd2.jpg" alt="Mix Design 2"/>
-        <img class="slide" src="cmd3.jpg" alt="Mix Design 3"/>
-        <img class="slide" src="cmd4.jpg" alt="Mix Design 4"/>
-        <img class="slide" src="cmd5.jpg" alt="Mix Design 5"/>
-        <img class="slide" src="cmd6.jpg" alt="Mix Design 6"/>
-        <img class="slide" src="cmd7.jpg" alt="Mix Design 7"/>
-        <img class="slide" src="cmd8.jpg" alt="Mix Design 8"/>
-        <img class="slide" src="cmd9.jpg" alt="Mix Design 9"/>
-    </div>
-
-    <h2>Structural Design Projects</h2>
-    <div class="slideshow-container slideshow3">
-        <img class="slide" src="struct1.jpg" alt="Structural Design 1"/>
-        <img class="slide" src="struct2.jpg" alt="Structural Design 2"/>
-        <img class="slide" src="struct3.jpg" alt="Structural Design 3"/>
-        <img class="slide" src="struct4.jpg" alt="Structural Design 4"/>
-        <img class="slide" src="struct5.jpg" alt="Structural Design 5"/>
-        <img class="slide" src="struct6.jpg" alt="Structural Design 6"/>
-        <img class="slide" src="struct7.jpg" alt="Structural Design 7"/>
-        <img class="slide" src="struct8.jpg" alt="Structural Design 8"/>
-        <img class="slide" src="struct9.jpg" alt="Structural Design 9"/>
-        <img class="slide" src="struct10.jpg" alt="Structural Design 10"/>
-        <img class="slide" src="struct11.jpg" alt="Structural Design 11"/>
-        <img class="slide" src="struct12.jpg" alt="Structural Design 12"/>
-        <img class="slide" src="struct13.jpg" alt="Structural Design 13"/>
-        <img class="slide" src="struct14.jpg" alt="Structural Design 14"/>
+    <div class="image-grid">
+        <img src="cmd1.jpg" alt="Mix Design 1"/>
+        <img src="cmd2.jpg" alt="Mix Design 2"/>
+        <img src="cmd3.jpg" alt="Mix Design 3"/>
+        <img src="cmd4.jpg" alt="Mix Design 4"/>
+        <img src="cmd5.jpg" alt="Mix Design 5"/>
+        <img src="cmd6.jpg" alt="Mix Design 6"/>
+        <img src="cmd7.jpg" alt="Mix Design 7"/>
+        <img src="cmd8.jpg" alt="Mix Design 8"/>
+        <img src="cmd9.jpg" alt="Mix Design 9"/>
     </div>
 </div>
 </body>
