@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Gallery</title>
+  <meta charset="UTF-8">
+  <title>Gallery - Shihab Ibrahim</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
       font-family: Arial, sans-serif;
-      line-height: 1.6;
+      background-color: #ffffff;
       margin: 0;
       padding: 0;
-      background: #fff;
       color: #2c3e50;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-      text-align: center;
     }
     nav {
       background-color: #2c3e50;
@@ -32,27 +26,28 @@
     nav a:hover {
       text-decoration: underline;
     }
-    img {
-      max-height: 600px;
-      width: auto;
-      border-radius: 10px;
-      display: none;
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      padding: 20px;
+    }
+    .gallery-container img {
+      width: 300px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery-container img:hover {
+      transform: scale(1.03);
     }
   </style>
-  <script>
-    let index = 0;
-    window.onload = function () {
-      const slides = document.querySelectorAll('.slide');
-      if (slides.length > 0) {
-        slides[0].style.display = 'block';
-        setInterval(() => {
-          slides[index].style.display = 'none';
-          index = (index + 1) % slides.length;
-          slides[index].style.display = 'block';
-        }, 4000);
-      }
-    };
-  </script>
 </head>
 <body>
   <nav>
@@ -65,38 +60,40 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <h1 style="text-align: center;">Gallery</h1>
-  <div class="container">
-    <img class="slide" alt="gallery1" src="gallery1.jpg"/>
-    <img class="slide" alt="gallery2" src="gallery2.jpg"/>
-    <img class="slide" alt="gallery3" src="gallery3.jpg"/>
-    <img class="slide" alt="gallery4" src="gallery4.jpg"/>
-    <img class="slide" alt="gallery5" src="gallery5.jpg"/>
-    <img class="slide" alt="gallery6" src="gallery6.jpg"/>
-    <img class="slide" alt="gallery7" src="gallery7.jpg"/>
-    <img class="slide" alt="gallery8" src="gallery8.jpg"/>
-    <img class="slide" alt="gallery9" src="gallery9.jpg"/>
-    <img class="slide" alt="gallery10" src="gallery10.jpg"/>
-    <img class="slide" alt="gallery11" src="gallery11.jpg"/>
-    <img class="slide" alt="gallery12" src="gallery12.jpg"/>
-    <img class="slide" alt="gallery13" src="gallery13.jpg"/>
-    <img class="slide" alt="gallery14" src="gallery14.jpg"/>
-    <img class="slide" alt="gallery15" src="gallery15.jpg"/>
-    <img class="slide" alt="gallery16" src="gallery16.jpg"/>
-    <img class="slide" alt="gallery17" src="gallery17.jpg"/>
-    <img class="slide" alt="gallery18" src="gallery18.jpg"/>
-    <img class="slide" alt="gallery19" src="gallery19.jpg"/>
-    <img class="slide" alt="gallery20" src="gallery20.jpg"/>
-    <img class="slide" alt="gallery21" src="gallery21.jpg"/>
-    <img class="slide" alt="gallery22" src="gallery22.jpg"/>
-    <img class="slide" alt="gallery23" src="gallery23.jpg"/>
-    <img class="slide" alt="gallery24" src="gallery24.jpg"/>
-    <img class="slide" alt="gallery25" src="gallery25.jpg"/>
-    <img class="slide" alt="gallery26" src="gallery26.jpg"/>
-    <img class="slide" alt="gallery27" src="gallery27.jpg"/>
-    <img class="slide" alt="gallery28" src="gallery28.jpg"/>
-    <img class="slide" alt="gallery29" src="gallery29.jpg"/>
-    <img class="slide" alt="gallery30" src="gallery30.jpg"/>
+  <h1>Gallery</h1>
+
+  <div class="gallery-container">
+    <!-- Change filenames if needed -->
+    <img src="gallery1.jpg" alt="Gallery Image 1"/>
+    <img src="gallery2.jpg" alt="Gallery Image 2"/>
+    <img src="gallery3.jpg" alt="Gallery Image 3"/>
+    <img src="gallery4.jpg" alt="Gallery Image 4"/>
+    <img src="gallery5.jpg" alt="Gallery Image 5"/>
+    <img src="gallery6.jpg" alt="Gallery Image 6"/>
+    <img src="gallery7.jpg" alt="Gallery Image 7"/>
+    <img src="gallery8.jpg" alt="Gallery Image 8"/>
+    <img src="gallery9.jpg" alt="Gallery Image 9"/>
+    <img src="gallery10.jpg" alt="Gallery Image 10"/>
+    <img src="gallery11.jpg" alt="Gallery Image 11"/>
+    <img src="gallery12.jpg" alt="Gallery Image 12"/>
+    <img src="gallery13.jpg" alt="Gallery Image 13"/>
+    <img src="gallery14.jpg" alt="Gallery Image 14"/>
+    <img src="gallery15.jpg" alt="Gallery Image 15"/>
+    <img src="gallery16.jpg" alt="Gallery Image 16"/>
+    <img src="gallery17.jpg" alt="Gallery Image 17"/>
+    <img src="gallery18.jpg" alt="Gallery Image 18"/>
+    <img src="gallery19.jpg" alt="Gallery Image 19"/>
+    <img src="gallery20.jpg" alt="Gallery Image 20"/>
+    <img src="gallery21.jpg" alt="Gallery Image 21"/>
+    <img src="gallery22.jpg" alt="Gallery Image 22"/>
+    <img src="gallery23.jpg" alt="Gallery Image 23"/>
+    <img src="gallery24.jpg" alt="Gallery Image 24"/>
+    <img src="gallery25.jpg" alt="Gallery Image 25"/>
+    <img src="gallery26.jpg" alt="Gallery Image 26"/>
+    <img src="gallery27.jpg" alt="Gallery Image 27"/>
+    <img src="gallery28.jpg" alt="Gallery Image 28"/>
+    <img src="gallery29.jpg" alt="Gallery Image 29"/>
+    <img src="gallery30.jpg" alt="Gallery Image 30"/>
   </div>
 </body>
 </html>
