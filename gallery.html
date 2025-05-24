@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Gallery - Shihab Ibrahim</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #ffffff;
       margin: 0;
       padding: 0;
+      background: #fff;
       color: #2c3e50;
     }
     nav {
@@ -28,23 +28,23 @@
     }
     h1 {
       text-align: center;
-      margin-top: 30px;
+      margin: 30px 0;
     }
-    .gallery-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 15px;
       padding: 20px;
     }
-    .gallery-container img {
-      width: 300px;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
       transition: transform 0.3s ease;
     }
-    .gallery-container img:hover {
+    .gallery img:hover {
       transform: scale(1.03);
     }
   </style>
@@ -61,39 +61,25 @@
   </nav>
 
   <h1>Gallery</h1>
-
-  <div class="gallery-container">
-    <!-- Change filenames if needed -->
-    <img src="gallery1.jpg" alt="Gallery Image 1"/>
-    <img src="gallery2.jpg" alt="Gallery Image 2"/>
-    <img src="gallery3.jpg" alt="Gallery Image 3"/>
-    <img src="gallery4.jpg" alt="Gallery Image 4"/>
-    <img src="gallery5.jpg" alt="Gallery Image 5"/>
-    <img src="gallery6.jpg" alt="Gallery Image 6"/>
-    <img src="gallery7.jpg" alt="Gallery Image 7"/>
-    <img src="gallery8.jpg" alt="Gallery Image 8"/>
-    <img src="gallery9.jpg" alt="Gallery Image 9"/>
-    <img src="gallery10.jpg" alt="Gallery Image 10"/>
-    <img src="gallery11.jpg" alt="Gallery Image 11"/>
-    <img src="gallery12.jpg" alt="Gallery Image 12"/>
-    <img src="gallery13.jpg" alt="Gallery Image 13"/>
-    <img src="gallery14.jpg" alt="Gallery Image 14"/>
-    <img src="gallery15.jpg" alt="Gallery Image 15"/>
-    <img src="gallery16.jpg" alt="Gallery Image 16"/>
-    <img src="gallery17.jpg" alt="Gallery Image 17"/>
-    <img src="gallery18.jpg" alt="Gallery Image 18"/>
-    <img src="gallery19.jpg" alt="Gallery Image 19"/>
-    <img src="gallery20.jpg" alt="Gallery Image 20"/>
-    <img src="gallery21.jpg" alt="Gallery Image 21"/>
-    <img src="gallery22.jpg" alt="Gallery Image 22"/>
-    <img src="gallery23.jpg" alt="Gallery Image 23"/>
-    <img src="gallery24.jpg" alt="Gallery Image 24"/>
-    <img src="gallery25.jpg" alt="Gallery Image 25"/>
-    <img src="gallery26.jpg" alt="Gallery Image 26"/>
-    <img src="gallery27.jpg" alt="Gallery Image 27"/>
-    <img src="gallery28.jpg" alt="Gallery Image 28"/>
-    <img src="gallery29.jpg" alt="Gallery Image 29"/>
-    <img src="gallery30.jpg" alt="Gallery Image 30"/>
+  <div class="gallery">
+    <!-- Replace with your images -->
+    <img src="gallery1.jpg" alt="Gallery Image 1">
+    <img src="gallery2.jpg" alt="Gallery Image 2">
+    <img src="gallery3.jpg" alt="Gallery Image 3">
+    <img src="gallery4.jpg" alt="Gallery Image 4">
+    <img src="gallery5.jpg" alt="Gallery Image 5">
+    <img src="gallery6.jpg" alt="Gallery Image 6">
+    <img src="gallery7.jpg" alt="Gallery Image 7">
+    <img src="gallery8.jpg" alt="Gallery Image 8">
+    <img src="gallery9.jpg" alt="Gallery Image 9">
+    <img src="gallery10.jpg" alt="Gallery Image 10">
+    <img src="gallery11.jpg" alt="Gallery Image 11">
+    <img src="gallery12.jpg" alt="Gallery Image 12">
+    <img src="gallery13.jpg" alt="Gallery Image 13">
+    <img src="gallery14.jpg" alt="Gallery Image 14">
+    <img src="gallery15.jpg" alt="Gallery Image 15">
+    <img src="gallery16.jpg" alt="Gallery Image 16">
+    <!-- Add more images as needed -->
   </div>
 </body>
 </html>
