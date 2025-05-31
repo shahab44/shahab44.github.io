@@ -86,13 +86,16 @@
     <p>He also shares educational videos on his <a href="https://www.youtube.com/@shahab441" target="_blank">YouTube channel</a>.</p>
 </div>
 
-<!-- Visitor Counter -->
-<div style="text-align:center; margin-top: 40px;">
-    <a href="https://www.hitwebcounter.com" target="_blank">
-        <img src="https://hitwebcounter.com/counter/counter.php?page=20809309&style=0038&nbdigits=5&type=page&initCount=0" title="Counter Widget" alt="Visit counter For Websites" border="0" />
-    </a>
-    <div style="font-size: 14px; color: gray;">Visitor Counter</div>
-</div>
+
+<p>Visitor Count: <span id="visits"></span></p>
+
+<script>
+  fetch('https://api.countapi.xyz/hit/shahab44.github.io/visits')
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById('visits').textContent = data.value;
+    });
+</script>
 
 </body>
 </html>
